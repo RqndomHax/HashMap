@@ -12,8 +12,19 @@
 
 typedef struct hashmap_s
 {
-    void *key;
-    void *value;
+    list_t *list;
 }hashmap_t;
+
+hashmap_t *new_hashmap(void);
+
+hashmap_t *reset_hashmap(hashmap_t **target);
+
+void destroy_hashmap(hashmap_t **hashmap);
+
+void *hashmap_get(hashmap_t *hashmap, void *key);
+
+void *hashmap_add(hashmap_t *hashmap, void *key, void *value);
+
+void *hashmap_remove(hashmap_t *hasmap, void *key);
 
 #endif /* !HASHMAP_H_ */

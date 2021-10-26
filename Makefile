@@ -14,6 +14,7 @@ CFLAGS 		+= -W -Wall -Wextra
 CC		= gcc
 
 SRC		= $(wildcard src/*.c)
+SRC		+= $(wildcard main.c)
 
 LIBSRC	= $(wildcard lib/*.c)
 
