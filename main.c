@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2021
-** hash maps
+** hashmap
 ** File description:
 ** main
 */
@@ -13,7 +13,7 @@ int main(void)
     hashmap_t *hashmap;
 
     hashmap = new_hashmap();
-    printf("%p\n", hashmap);
     destroy_hashmap(&hashmap);
+    printf("key = %ld\n", hash("hello worl"));
     return (0);
 }

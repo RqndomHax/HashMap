@@ -6,13 +6,24 @@
 */
 
 #include "../includes/hashmap.h"
-#include "../includes/list.h"
+
+static void destroy_elements(hashmap_t *hashmap)
+{
+    (void) hashmap;
+    // TODO
+}
 
 void destroy_hashmap(hashmap_t **hashmap)
 {
     if (*hashmap == NULL)
         return;
-    list_destroy(&((*hashmap)->list));
+    destroy_elements(*hashmap);
     free(*hashmap);
     *hashmap = NULL;
+}
+
+void clear_hashmap(hashmap_t *hashmap)
+{
+    if (hashmap != NULL)
+        destroy_elements(hashmap);
 }
